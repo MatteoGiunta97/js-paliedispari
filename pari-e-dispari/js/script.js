@@ -10,18 +10,26 @@ Dichiariamo chi ha vinto.
 
 
 // Chiedo all'utente di inserire pari o dispari
-const evenOrOdd = prompt('inserisci la parola "pari" o "dispari"');
+const userEvenOdd = prompt('inserisci la parola "pari" o "dispari"');
 
 // Chiedo all'utente di inserire un numero da 1 a 5
 const userNum = parseInt(prompt('inserisci un numero da 1 a 5'));
 
 // Genero un numero random da 1 a 5 per il computer
 const compNum = numRandom(1,5);
-console.log(compNum)
 
-// Sommo i due numeri e verifico se la somma è pari o dispari
+// Sommo i due numeri e verifico se la somma è pari o dispari, quindi dichiaro il vincitore
 
-// Dichiaro il vincitore
+    // Verifico se l'utente ha vinto
+    if (userEvenOdd === evenOrOdd(userNum, compNum)) {
+
+        alert('Hai vinto :) - il tuo numero: '+ userNum + ' - il numero del computer: ' + compNum)
+
+    }else {
+
+        alert('Il computer vince :( - il tuo numero: '+ userNum + ' - il numero del computer: ' + compNum)
+    }
+
 
 
 /*
@@ -31,4 +39,23 @@ console.log(compNum)
 // La funzione genera un numero intero random tra due parametri: min e max
 function numRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+// La funzione stabilisce se la somma di due numeri è pari o dispari
+function evenOrOdd(num1, num2) {
+
+    let sum = num1 + num2;
+
+    if (sum % 2 === 0) {
+
+        sum = 'pari';
+
+    } else {
+        
+        sum = 'dispari';
+
+    }
+
+    return sum
+    
 }
