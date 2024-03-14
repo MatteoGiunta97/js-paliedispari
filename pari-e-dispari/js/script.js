@@ -10,10 +10,13 @@ Dichiariamo chi ha vinto.
 
 
 // Chiedo all'utente di inserire pari o dispari
+const evenOrOdd = prompt('inserisci la parola "pari" o "dispari"');
 
 // Chiedo all'utente di inserire un numero da 1 a 5
+const userNum = parseInt(prompt('inserisci un numero da 1 a 5'));
 
 // Genero un numero random da 1 a 5 per il computer
+
 
 // Sommo i due numeri e verifico se la somma è pari o dispari
 
